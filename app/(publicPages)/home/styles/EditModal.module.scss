@@ -1,0 +1,146 @@
+@use "../../../../assets/styles/" as *;
+
+.EditModal {
+  width: 50vw;
+  height: 50vh;
+  background: #f5f9ff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 32px;
+  border: 1px solid #dddddd;
+  box-shadow: 2px 1px 2px rgba(0, 22, 71, 0.045);
+  row-gap: pixRem(14);
+  padding: 32px;
+  text-align: center;
+
+  @include md() {
+    width: 80vw;
+    height: auto;
+  }
+  @include sm() {
+    width: 95vw;
+    height: auto;
+    padding: 32px 16px;
+  }
+
+  .header {
+    h1 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      color: $secondary;
+
+      @include sm() {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $secondary;
+
+      @include sm() {
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  .title_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    row-gap: 0;
+
+    @include sm() {
+      width: 100%;
+    }
+
+    label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $secondary;
+      text-align: left;
+
+      @include sm() {
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+      }
+    }
+
+    input {
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: $secondary;
+      text-align: left;
+      padding: 12px;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    input:focus {
+      border: 1px solid #3167b8;
+    }
+  }
+
+  .button_container {
+    display: flex;
+    column-gap: 12px;
+
+    .edit_button {
+      padding: 10px 20px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+      transition: ease all 0.5s;
+      background-color: $extended;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .edit_button:hover {
+      background-color: $primaryHover;
+      color: $secondary;
+    }
+
+    .close_button {
+      padding: 10px 20px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+      transition: ease all 0.5s;
+      background-color: #cd1616;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .close_button:hover {
+      background-color: #d25e5e;
+    }
+  }
+}

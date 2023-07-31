@@ -1,0 +1,30 @@
+@use "../../assets/styles/" as *;
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+
+  .view_button {
+    padding: 10px 40px;
+    text-align: center;
+    color: $secondary;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    transition: ease all 0.5s;
+    background-color: $primaryHover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .view_button:hover {
+    background-color: $extended;
+    color: #ffffff;
+  }
+}
